@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+html,body
+{
+    background-color: #222629;
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+#Leave
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color:#87C232;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+#Leave:hover
+{
+    background-color:#7cb331;
+
+}
+
+#VideoGrid
+{
+    position: absolute;
+    width: 60%;
+    height: 75%;
+    border: 5px solid #474A4F;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+#VideoGrid::-webkit-scrollbar 
+{
+    width: 8px;
+    background: #222629;
+}
+#VideoGrid::-webkit-scrollbar-thumb
+{
+    border-radius: 8px;
+    background-color: #7cb331;
+}
+
+video
+{
+    box-sizing: border-box;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+
+#VideoGrid .vid:first-child:nth-last-child(1)
+{
+    width: 100%;
+    height: 100%;
+}
+#VideoGrid .vid:first-child:nth-last-child(2),
+#VideoGrid .vid:first-child:nth-last-child(2) ~ .vid
+{
+    width: 50%;
+    height: 100%;
+}
+#VideoGrid .vid:first-child:nth-last-child(3),
+#VideoGrid .vid:first-child:nth-last-child(3) ~ .vid
+{
+    width: 50%;
+    height: 50%;
+}
+
+#VideoGrid .vid:first-child:nth-last-child(3) ~ .vid:nth-child(3)
+{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#VideoGrid .vid:first-child:nth-last-child(4),
+#VideoGrid .vid:first-child:nth-last-child(4) ~ .vid
+{
+    width: 50%;
+    height: 50%;
+}
+#VideoGrid > *
+{
+    width: 33.3%;
+    height: 50%;
+}
